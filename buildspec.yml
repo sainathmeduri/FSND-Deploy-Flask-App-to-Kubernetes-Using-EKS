@@ -20,7 +20,8 @@ phases:
         - pip3 install flask
         - pip3 install gunicorn
         - pip3 install pytest
-        - python3 test_main.py
+        - pytest test_main.py
+#       - python3 test_main.py
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
